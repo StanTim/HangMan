@@ -20,17 +20,17 @@ class ConsoleInterface
   # класса Game (количество ошибок, сколько осталось попыток и т.д.)
   def print_out
     puts <<~END
-      Слово: #{word_to_show}
+      Слово: #{word_to_show.colorize(:green)}
       #{figure}
-      Ошибки (#{@game.errors_made}): #{errors_to_show}
+      Ошибки (#{@game.errors_made}): #{errors_to_show.colorize(:red)}
       У вас осталось попыток: #{@game.errors_allowed}
 
     END
 
     if @game.won?
-      puts "Поздравляем, вы выиграли!"
+      puts "Поздравляем, вы выиграли!".colorize(:blue)
     elsif @game.lost?
-      puts "Вы проиграли, загаданное слово: #{@game.word}"
+      puts "Вы проиграли, загаданное слово: #{@game.word.colorize(:green)}".blue.on_red.blink
     end
   end
 
@@ -38,7 +38,7 @@ class ConsoleInterface
   # ошибок, сделанных пользователем на данный момент (число ошибок берем у
   # экземпляра класса Game)
   def figure
-    FIGURES[@game.errors_made]
+    FIGURES[@game.errors_made].colorize(:yellow)
   end
 
   # Метод, который готовит слово для вывода "на игровом табло".
