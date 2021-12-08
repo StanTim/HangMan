@@ -12,6 +12,7 @@ a hanged man stick figure as a tally mark. Russians
 letters "Ё" and "Й" is equivalent russian "Е" and "И".
 
 ## Getting Started
+* Open program dir in console
 
 Clone program repo
 ```
@@ -22,8 +23,8 @@ bundle install
 ```
 To add any words in game just open ```data/words.txt``` and input words with new line
 ### Executing program
+* Open program dir in console
 
-* Open dir with program in console
 * Run file main.rb:
 ```
 ruby main.rb
