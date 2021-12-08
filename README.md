@@ -17,11 +17,14 @@ Clone program repo
 ```
 git clone git@github.com:StanTim/HangMan.git
 ```
+```
+bundle install
+```
 To add any words in game just open ```data/words.txt``` and input words with new line
 ### Executing program
 
 * Open dir with program in console
-* Run file magic_ball.rb:
+* Run file main.rb:
 ```
 ruby main.rb
 ```
